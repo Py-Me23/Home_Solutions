@@ -1,0 +1,7 @@
+{
+  "name": "HomeSolutions",
+  "description": "A trusted platform connecting homeowners with reliable local service providers like plumbers, electricians, and painters.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
