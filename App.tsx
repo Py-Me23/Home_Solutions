@@ -1,13 +1,13 @@
-import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
-import { Layout } from './components/Layout';
-import { Home } from './pages/Home';
-import { SearchPage } from './pages/SearchPage';
-import { ProviderDetails } from './pages/ProviderDetails';
-import { Login } from './pages/Login';
-import { ProviderDashboard } from './pages/ProviderDashboard';
-import { UserDashboard } from './pages/UserDashboard';
-import { ThemeProvider } from './components/ThemeContext';
+import React from "react";
+import { HashRouter as Router, Routes, Route } from "react-router-dom";
+import { Layout } from "./components/Layout";
+import { Home } from "./pages/Home";
+import { SearchPage } from "./pages/SearchPage";
+import { ProviderDetails } from "./pages/ProviderDetails";
+import { Login } from "./pages/Login";
+import { ProviderDashboard } from "./pages/ProviderDashboard";
+import { UserDashboard } from "./pages/UserDashboard";
+import { ThemeProvider } from "./components/ThemeContext";
 
 const App: React.FC = () => {
   return (
