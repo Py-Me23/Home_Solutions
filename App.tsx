@@ -1,3 +1,4 @@
+/* FAST-MODE */
 import React from "react";
 import { HashRouter as Router, Routes, Route } from "react-router-dom";
 import { Layout } from "./components/Layout";
@@ -14,15 +15,17 @@ const App: React.FC = () => {
     <ThemeProvider>
       <Router>
         <Layout>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/search" element={<SearchPage />} />
-            <Route path="/provider/:id" element={<ProviderDetails />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/register-provider" element={<Login />} />
-            <Route path="/provider-dashboard" element={<ProviderDashboard />} />
-            <Route path="/user-dashboard" element={<UserDashboard />} />
-          </Routes>
+          <div className="bg-red-500/10">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/search" element={<SearchPage />} />
+              <Route path="/provider/:id" element={<ProviderDetails />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/register-provider" element={<Login />} />
+              <Route path="/provider-dashboard" element={<ProviderDashboard />} />
+              <Route path="/user-dashboard" element={<UserDashboard />} />
+            </Routes>
+          </div>
         </Layout>
       </Router>
     </ThemeProvider>

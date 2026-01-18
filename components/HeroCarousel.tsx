@@ -29,26 +29,26 @@ export const HeroCarousel: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % HERO_IMAGES.length);
-    }, 3000); // Changed to 3 seconds
+    }, 6000); // Slower, more elegant transitions
     return () => clearInterval(interval);
   }, []);
 
   return (
-    <div className="absolute inset-0 z-0">
+    <div className="absolute inset-0 z-0 overflow-hidden">
       {HERO_IMAGES.map((image, index) => (
         <div
           key={index}
-          className={`absolute inset-0 transition-opacity duration-1000 ease-in-out ${
-            index === currentIndex ? 'opacity-100' : 'opacity-0'
-          }`}
+          className={`absolute inset-0 transition-opacity duration-[2000ms] ease-in-out ${index === currentIndex ? 'opacity-100' : 'opacity-0'
+            }`}
         >
           <img
             src={image.url}
             alt={image.alt}
-            className="w-full h-full object-cover"
+            className={`w-full h-full object-cover transition-transform duration-[8000ms] ease-linear ${index === currentIndex ? 'scale-110' : 'scale-100'
+              }`}
           />
-          {/* Overlay gradient for text readability */}
-          <div className="absolute inset-0 bg-slate-900/60" />
+          {/* Refined overlay gradient */}
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-950/80 via-slate-900/40 to-indigo-900/40" />
         </div>
       ))}
     </div>
