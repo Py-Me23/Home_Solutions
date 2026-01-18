@@ -15,17 +15,15 @@ const App: React.FC = () => {
     <ThemeProvider>
       <Router>
         <Layout>
-          <div className="bg-red-500/10">
-            <Routes>
-              <Route path="/" element={<Home />} />
-              <Route path="/search" element={<SearchPage />} />
-              <Route path="/provider/:id" element={<ProviderDetails />} />
-              <Route path="/login" element={<Login />} />
-              <Route path="/register-provider" element={<Login />} />
-              <Route path="/provider-dashboard" element={<ProviderDashboard />} />
-              <Route path="/user-dashboard" element={<UserDashboard />} />
-            </Routes>
-          </div>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/search" element={<SearchPage />} />
+            <Route path="/provider/:id" element={<ProviderDetails />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register-provider" element={<Login />} />
+            <Route path="/provider-dashboard" element={<ProviderDashboard />} />
+            <Route path="/user-dashboard" element={<UserDashboard />} />
+          </Routes>
         </Layout>
       </Router>
     </ThemeProvider>
