@@ -49,14 +49,14 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({ onCategorySelect }) =>
 
   return (
     <div className={`w-full transition-all duration-500 z-[100] ${isSticky
-        ? 'fixed top-4 left-1/2 -translate-x-1/2 max-w-2xl px-4'
-        : 'max-w-3xl mx-auto'
+      ? 'fixed top-4 left-1/2 -translate-x-1/2 max-w-2xl px-4'
+      : 'max-w-3xl mx-auto'
       }`}>
       <div className={`glass rounded-3xl p-1.5 shadow-2xl transition-all duration-500 overflow-hidden ${isSticky ? 'bg-white/70 dark:bg-slate-900/70 border-indigo-500/30' : ''
         }`}>
         <div className={`rounded-[1.4rem] transition-all duration-500 ${isSticky
-            ? 'p-2'
-            : 'bg-white dark:bg-slate-900 p-6 md:p-8'
+          ? 'p-2'
+          : 'bg-white dark:bg-slate-900 p-5 sm:p-6 md:p-8'
           }`}>
           {!isSticky && (
             <div className="flex items-center space-x-2 mb-6 animate-fade-in-up">
@@ -69,8 +69,8 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({ onCategorySelect }) =>
 
           {!isSticky && (
             <>
-              <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">How can we assist you?</h3>
-              <p className="text-slate-500 dark:text-slate-400 mb-8 text-sm font-medium opacity-80">
+              <h3 className="text-2xl sm:text-3xl font-bold text-slate-900 dark:text-white mb-2 tracking-tight">How can we assist you?</h3>
+              <p className="text-slate-500 dark:text-slate-400 mb-6 sm:mb-8 text-xs sm:text-sm font-medium opacity-80">
                 Describe your project or issue—our agent will pinpoint the ideal expert for you.
               </p>
             </>
@@ -78,9 +78,9 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({ onCategorySelect }) =>
 
           <div className="relative group">
             <div className="absolute -inset-1 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-2xl blur opacity-20 group-hover:opacity-40 transition duration-500"></div>
-            <div className={`relative flex items-center gap-2 bg-slate-50 dark:bg-slate-950/50 rounded-xl border border-slate-200/50 dark:border-slate-800/50 transition-all duration-300 ${isSticky ? 'p-1' : 'p-2'}`}>
-              <div className="flex-1 flex items-center px-4">
-                <Search className={`text-slate-400 transition-all ${isSticky ? 'w-4 h-4' : 'w-5 h-5'} mr-3`} />
+            <div className={`relative flex flex-col sm:flex-row items-stretch sm:items-center gap-2 bg-slate-50 dark:bg-slate-950/50 rounded-xl border border-slate-200/50 dark:border-slate-800/50 transition-all duration-300 ${isSticky ? 'p-1' : 'p-1.5 sm:p-2'}`}>
+              <div className="flex-1 flex items-center px-3 sm:px-4">
+                <Search className={`text-slate-400 transition-all ${isSticky ? 'w-4 h-4' : 'w-5 h-5'} mr-2 sm:mr-3`} />
                 <input
                   type="text"
                   value={query}
@@ -96,14 +96,14 @@ export const SmartSearch: React.FC<SmartSearchProps> = ({ onCategorySelect }) =>
                       setShowDropdown(false);
                     }
                   }}
-                  placeholder={isSticky ? "Quick find..." : "e.g., 'I have a burst pipe in the basement'"}
-                  className={`w-full bg-transparent text-slate-800 dark:text-slate-100 placeholder-slate-400/70 focus:outline-none font-medium ${isSticky ? 'py-1.5 text-sm' : 'py-3 text-lg'}`}
+                  placeholder={isSticky ? "Quick find..." : "e.g., 'I have a burst pipe...'"}
+                  className={`w-full bg-transparent text-slate-800 dark:text-slate-100 placeholder-slate-400/70 focus:outline-none font-medium ${isSticky ? 'py-1.5 text-sm' : 'py-2.5 sm:py-3 text-base sm:text-lg'}`}
                 />
               </div>
               <button
                 onClick={handleSearch}
                 disabled={isLoading || !query}
-                className={`bg-slate-900 dark:bg-indigo-600 text-white rounded-lg font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-indigo-500/10 disabled:opacity-50 flex items-center justify-center ${isSticky ? 'px-4 py-2 text-xs' : 'px-8 py-3.5'
+                className={`bg-slate-900 dark:bg-indigo-600 text-white rounded-lg font-bold hover:scale-[1.02] active:scale-[0.98] transition-all shadow-lg shadow-indigo-500/10 disabled:opacity-50 flex items-center justify-center ${isSticky ? 'px-4 py-2 text-xs' : 'px-6 sm:px-8 py-3.5 text-sm sm:text-base'
                   }`}
               >
                 {isLoading ? <Loader2 className="animate-spin w-4 h-4" /> : isSticky ? <ArrowRight className="w-4 h-4" /> : 'Optimize Search'}

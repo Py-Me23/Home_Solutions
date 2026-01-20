@@ -58,8 +58,8 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
       {showHeaderFooter && (
         <header
           className={`fixed z-50 transition-all duration-500 left-1/2 -translate-x-1/2 ${scrolled
-            ? 'top-4 w-[95%] max-w-7xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl rounded-2xl py-2 px-8'
-            : 'top-0 w-full bg-slate-950/20 backdrop-blur-sm border-b border-white/5 py-4 px-8'
+            ? 'top-2 sm:top-4 w-[95%] max-w-7xl bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl border border-white/20 dark:border-slate-800 shadow-2xl rounded-2xl py-1.5 sm:py-2 px-4 sm:px-8'
+            : 'top-0 w-full bg-slate-950/20 backdrop-blur-sm border-b border-white/5 py-4 px-4 sm:px-8'
             }`}
         >
           <div className="flex items-center justify-between h-12">
@@ -67,7 +67,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
               <div className="transition-transform duration-500 group-hover:scale-110 drop-shadow-2xl">
                 <LogoIcon className="w-9 h-9" />
               </div>
-              <span className={`text-2xl font-[900] tracking-tight ${scrolled ? 'text-slate-900 dark:text-white' : 'text-white'}`}>
+              <span className={`text-xl sm:text-2xl font-[900] tracking-tight ${scrolled ? 'text-slate-900 dark:text-white' : 'text-white'}`}>
                 HomeSolutions
               </span>
             </Link>
@@ -137,7 +137,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Mobile Nav Overlay */}
       {isMenuOpen && (
-        <div className="fixed top-24 left-1/2 -translate-x-1/2 w-[95%] max-w-sm z-40 md:hidden animate-fade-in-up">
+        <div className="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 w-[95%] max-w-sm z-[100] md:hidden animate-fade-in-up">
           <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-100 dark:border-slate-800 rounded-3xl shadow-2xl p-6 flex flex-col space-y-4">
             <Link to="/" onClick={() => setIsMenuOpen(false)} className="py-2 text-slate-800 dark:text-white font-medium text-lg font-serif">Home</Link>
             <Link to="/search" onClick={() => setIsMenuOpen(false)} className="py-2 text-slate-600 dark:text-slate-300 font-medium">Find Services</Link>

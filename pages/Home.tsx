@@ -47,7 +47,7 @@ export const Home: React.FC = () => {
         <div className="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-purple-500/10 blur-[120px] animate-pulse-slow delay-700"></div>
       </div>
 
-      <div className="container mx-auto px-4 md:px-6 pt-24 pb-20 relative z-10">
+      <div className="container mx-auto px-4 sm:px-6 pt-28 sm:pt-32 pb-20 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-6 lg:grid-cols-12 auto-rows-[minmax(120px,auto)] gap-4 md:gap-6">
 
           {/* Box 1: Hero Carousel (Main Visual) */}
@@ -58,7 +58,7 @@ export const Home: React.FC = () => {
               <span className="inline-flex items-center px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white text-[10px] font-black uppercase tracking-[0.2em] mb-4">
                 <Gem className="w-3 h-3 mr-2 text-indigo-400" /> Premium Standards
               </span>
-              <h1 className="text-4xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-6xl font-black text-white leading-[0.9] tracking-tighter mb-4">
                 REDEFINING <br />
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-400 to-purple-400">HOME CARE.</span>
               </h1>
@@ -113,9 +113,9 @@ export const Home: React.FC = () => {
           </div>
 
           {/* Section Heading: Categories */}
-          <div className="md:col-span-6 lg:col-span-12 mt-12 mb-8">
+          <div className="md:col-span-6 lg:col-span-12 mt-12 mb-8 scroll-mt-24 sm:scroll-mt-32" id="categories">
             <div className="flex items-center space-x-6">
-              <h2 className="text-5xl md:text-6xl font-[900] italic tracking-tight uppercase text-slate-900 dark:text-white leading-[0.8]">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-[900] italic tracking-tight uppercase text-slate-900 dark:text-white leading-[0.8]">
                 CORE DOMAINS
               </h2>
               <div className="h-[1px] flex-1 bg-indigo-500/30"></div>
@@ -167,9 +167,9 @@ export const Home: React.FC = () => {
           })}
 
           {/* Section Heading: Pros */}
-          <div className="md:col-span-6 lg:col-span-12 mt-12 mb-4">
+          <div className="md:col-span-6 lg:col-span-12 mt-12 mb-4 scroll-mt-24 sm:scroll-mt-32" id="pros">
             <div className="flex items-center justify-between">
-              <h2 className="text-4xl md:text-5xl font-black tracking-tighter uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-600">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter uppercase italic text-transparent bg-clip-text bg-gradient-to-r from-slate-900 to-slate-500 dark:from-white dark:to-slate-600">
                 Top Performers
               </h2>
               <Link to="/search" className="hidden md:flex items-center text-xs font-black uppercase tracking-widest text-indigo-500 hover:text-indigo-600 transition-colors">
@@ -221,7 +221,7 @@ export const Home: React.FC = () => {
           <div className="md:col-span-6 lg:col-span-6 lg:row-span-3 rounded-[2.5rem] glass p-10 border border-white/10 relative overflow-hidden group animate-fade-in-up">
             <div className="relative z-10 h-full flex flex-col justify-between">
               <div>
-                <h3 className="text-4xl font-black tracking-tighter mb-6 leading-[0.9]">AGENTIC <br />VERIFICATION</h3>
+                <h3 className="text-3xl sm:text-4xl font-black tracking-tighter mb-6 leading-[0.9]">AGENTIC <br />VERIFICATION</h3>
                 <p className="text-slate-500 dark:text-slate-400 font-medium mb-8">
                   Our proprietary algorithm scans credentials, reviews, and historical data to ensure every pro meets the gold standard.
                 </p>
@@ -263,7 +263,7 @@ export const Home: React.FC = () => {
             </div>
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
             <div className="absolute bottom-8 left-8 right-8">
-              <h3 className="text-2xl font-black text-white tracking-tight mb-2">Hyper-Local Context</h3>
+              <h3 className="text-xl sm:text-2xl font-black text-white tracking-tight mb-2">Hyper-Local Context</h3>
               <p className="text-slate-300 text-xs font-medium opacity-80 mb-6">Pros in your immediate zip code, ready to deploy in under 60 minutes.</p>
               <div className="flex items-center space-x-2">
                 <div className="w-2 h-2 rounded-full bg-green-500 animate-pulse"></div>
