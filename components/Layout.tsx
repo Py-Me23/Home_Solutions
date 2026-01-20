@@ -188,29 +188,29 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                 </p>
               </div>
               <div>
-                <h4 className="text-white font-serif text-lg mb-6">Discover</h4>
+                <h4 className="text-white font-[900] text-lg mb-6 uppercase italic tracking-wider">Discover</h4>
                 <ul className="space-y-3 text-sm">
-                  <li><Link to="/search?category=Plumbing" className="hover:text-indigo-400 transition-colors">Plumbing</Link></li>
-                  <li><Link to="/search?category=Electrical" className="hover:text-indigo-400 transition-colors">Electrical</Link></li>
-                  <li><Link to="/search?category=Cleaning" className="hover:text-indigo-400 transition-colors">Home Cleaning</Link></li>
-                  <li><Link to="/search" className="hover:text-indigo-400 transition-colors">All Services</Link></li>
+                  <li><Link to="/search?category=Plumbing" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Plumbing</Link></li>
+                  <li><Link to="/search?category=Electrical" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Electrical</Link></li>
+                  <li><Link to="/search?category=Cleaning" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Home Cleaning</Link></li>
+                  <li><Link to="/search" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">All Services</Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-white font-serif text-lg mb-6">Company</h4>
+                <h4 className="text-white font-[900] text-lg mb-6 uppercase italic tracking-wider">Company</h4>
                 <ul className="space-y-3 text-sm">
-                  <li><Link to="#" className="hover:text-indigo-400 transition-colors">About Us</Link></li>
-                  <li><Link to="#" className="hover:text-indigo-400 transition-colors">Careers</Link></li>
-                  <li><Link to="#" className="hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
-                  <li><Link to="#" className="hover:text-indigo-400 transition-colors">Terms of Service</Link></li>
+                  <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">About Us</Link></li>
+                  <li><Link to="/careers" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Careers</Link></li>
+                  <li><Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Privacy Policy</Link></li>
+                  <li><Link to="/terms" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Terms of Service</Link></li>
                 </ul>
               </div>
               <div>
-                <h4 className="text-white font-serif text-lg mb-6">For Pros</h4>
+                <h4 className="text-white font-[900] text-lg mb-6 uppercase italic tracking-wider">For Pros</h4>
                 <ul className="space-y-3 text-sm">
-                  <li><Link to="/register-provider" className="hover:text-indigo-400 transition-colors">Register Business</Link></li>
-                  <li><Link to="#" className="hover:text-indigo-400 transition-colors">Success Stories</Link></li>
-                  <li><Link to="#" className="hover:text-indigo-400 transition-colors">Partner Support</Link></li>
+                  <li><Link to="/register-provider" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Register Business</Link></li>
+                  <li><Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Success Stories</Link></li>
+                  <li><Link to="/privacy" onClick={() => window.scrollTo(0, 0)} className="hover:text-indigo-400 transition-colors">Partner Support</Link></li>
                 </ul>
               </div>
             </div>

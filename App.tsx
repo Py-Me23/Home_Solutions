@@ -8,6 +8,7 @@ import { ProviderDetails } from "./pages/ProviderDetails";
 import { Login } from "./pages/Login";
 import { ProviderDashboard } from "./pages/ProviderDashboard";
 import { UserDashboard } from "./pages/UserDashboard";
+import { CompanyInfo } from "./pages/CompanyInfo";
 import { ThemeProvider } from "./components/ThemeContext";
 
 const App: React.FC = () => {
@@ -23,6 +24,10 @@ const App: React.FC = () => {
             <Route path="/register-provider" element={<Login />} />
             <Route path="/provider-dashboard" element={<ProviderDashboard />} />
             <Route path="/user-dashboard" element={<UserDashboard />} />
+            <Route path="/about" element={<CompanyInfo />} />
+            <Route path="/careers" element={<CompanyInfo />} />
+            <Route path="/privacy" element={<CompanyInfo />} />
+            <Route path="/terms" element={<CompanyInfo />} />
           </Routes>
         </Layout>
       </Router>
