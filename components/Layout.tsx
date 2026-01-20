@@ -137,14 +137,48 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
 
       {/* Mobile Nav Overlay */}
       {isMenuOpen && (
-        <div className="fixed top-20 sm:top-24 left-1/2 -translate-x-1/2 w-[95%] max-w-sm z-[100] md:hidden animate-fade-in-up">
-          <div className="bg-white/95 dark:bg-slate-900/95 backdrop-blur-xl border border-slate-100 dark:border-slate-800 rounded-3xl shadow-2xl p-6 flex flex-col space-y-4">
-            <Link to="/" onClick={() => setIsMenuOpen(false)} className="py-2 text-slate-800 dark:text-white font-medium text-lg font-serif">Home</Link>
-            <Link to="/search" onClick={() => setIsMenuOpen(false)} className="py-2 text-slate-600 dark:text-slate-300 font-medium">Find Services</Link>
-            <Link to="/login" onClick={() => setIsMenuOpen(false)} className="py-2 text-slate-600 dark:text-slate-300 font-medium">Login</Link>
-            <Link to="/register-provider" onClick={() => setIsMenuOpen(false)} className="py-3 text-center bg-indigo-600 text-white rounded-xl font-bold shadow-md">Join as Pro</Link>
+        <>
+          <div
+            className="fixed inset-0 bg-slate-950/40 backdrop-blur-sm z-[90] md:hidden"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          <div className="fixed top-24 left-4 right-4 z-[100] md:hidden animate-fade-in-up">
+            <div className="bg-white dark:bg-slate-900 rounded-[2rem] shadow-2xl border border-slate-200 dark:border-slate-800 overflow-hidden">
+              <div className="p-6 flex flex-col space-y-2">
+                <Link
+                  to="/"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-3 text-slate-900 dark:text-white font-black text-lg hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors"
+                >
+                  Home
+                </Link>
+                <Link
+                  to="/search"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-3 text-slate-600 dark:text-slate-300 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors"
+                >
+                  Find Services
+                </Link>
+                <Link
+                  to="/login"
+                  onClick={() => setIsMenuOpen(false)}
+                  className="px-4 py-3 text-slate-600 dark:text-slate-300 font-bold hover:bg-slate-50 dark:hover:bg-slate-800 rounded-xl transition-colors"
+                >
+                  Login
+                </Link>
+                <div className="pt-4">
+                  <Link
+                    to="/register-provider"
+                    onClick={() => setIsMenuOpen(false)}
+                    className="block w-full py-4 text-center bg-indigo-600 text-white rounded-2xl font-black uppercase tracking-widest shadow-lg shadow-indigo-500/20 active:scale-[0.98] transition-all"
+                  >
+                    Join as Pro
+                  </Link>
+                </div>
+              </div>
+            </div>
           </div>
-        </div>
+        </>
       )}
 
       <main className={`flex-grow ${!showHeaderFooter ? 'flex items-center justify-center bg-white dark:bg-slate-950' : ''}`}>
