@@ -249,10 +249,19 @@ export const Home: React.FC = () => {
 
           {/* Box 13: Local Map Snippet (Visual Placeholder) */}
           <div className="md:col-span-6 lg:col-span-6 lg:row-span-3 rounded-[2.5rem] glass overflow-hidden border border-white/10 relative group animate-fade-in-up">
-            <div className="absolute inset-0 bg-slate-200 dark:bg-slate-900 flex items-center justify-center grayscale opacity-40 group-hover:scale-110 transition-all duration-[2s]">
-              <MapPin className="w-12 h-12 text-slate-400 animate-bounce" />
+            <img
+              src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?q=80&w=1200&auto=format&fit=crop"
+              className="absolute inset-0 w-full h-full object-cover grayscale brightness-[0.4] opacity-60 group-hover:scale-110 transition-all duration-[2s]"
+              alt="Local Map"
+            />
+            <div className="absolute inset-0 bg-indigo-500/10 mix-blend-overlay"></div>
+            <div className="absolute inset-0 flex items-center justify-center">
+              <div className="relative">
+                <div className="absolute inset-0 bg-indigo-500 blur-2xl opacity-20 animate-pulse"></div>
+                <MapPin className="w-12 h-12 text-indigo-400 relative z-10" />
+              </div>
             </div>
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent"></div>
+            <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/40 to-transparent"></div>
             <div className="absolute bottom-8 left-8 right-8">
               <h3 className="text-2xl font-black text-white tracking-tight mb-2">Hyper-Local Context</h3>
               <p className="text-slate-300 text-xs font-medium opacity-80 mb-6">Pros in your immediate zip code, ready to deploy in under 60 minutes.</p>
@@ -268,3 +277,4 @@ export const Home: React.FC = () => {
     </div>
   );
 };
+
